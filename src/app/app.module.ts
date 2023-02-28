@@ -10,6 +10,7 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContentComponent } from './content/content.component';
 import { SesionComponent } from './sesion/sesion.component';
+import { RouterModule } from '@angular/router';
 /** */
 import { CargarscriptsService } from './cargarscripts.service';
 
@@ -26,7 +27,8 @@ import { CargarscriptsService } from './cargarscripts.service';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule.forRoot(appRoutes,{enableTracing:true})
   ],
   providers: [
     CargarscriptsService
