@@ -10,9 +10,14 @@ import { FooterComponent } from './footer/footer.component';
 import { RegistroComponent } from './registro/registro.component';
 import { ContentComponent } from './content/content.component';
 import { SesionComponent } from './sesion/sesion.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule,Routes } from '@angular/router';
 /** */
 import { CargarscriptsService } from './cargarscripts.service';
+
+const appRoutes: Routes = [
+ {path:'',component:InicioComponent}
+  
+ ]
 
 @NgModule({
   declarations: [
