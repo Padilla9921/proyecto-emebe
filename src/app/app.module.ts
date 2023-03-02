@@ -13,9 +13,12 @@ import { SesionComponent } from './sesion/sesion.component';
 import { RouterModule,Routes } from '@angular/router';
 /** */
 import { CargarscriptsService } from './cargarscripts.service';
+import { AcercaComponent } from './content/acerca/acerca.component';
 
 const appRoutes: Routes = [
- {path:'',component:InicioComponent}
+ {path:'',component:InicioComponent},
+ {path:'acerca',component:AcercaComponent},
+
   
  ]
 
@@ -28,7 +31,8 @@ const appRoutes: Routes = [
     FooterComponent,
     RegistroComponent,
     ContentComponent,
-    SesionComponent
+    SesionComponent,
+    AcercaComponent
   ],
   imports: [
     BrowserModule,
