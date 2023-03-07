@@ -18,6 +18,7 @@ import { AcercaComponent } from './content/acerca/acerca.component';
 const appRoutes: Routes = [
  {path:'',component:InicioComponent},
  {path:'acerca',component:AcercaComponent},
+ {path:'inicio',component:InicioComponent}
 
   
  ]
