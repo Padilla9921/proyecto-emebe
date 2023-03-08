@@ -14,11 +14,14 @@ import { RouterModule,Routes } from '@angular/router';
 /** */
 import { CargarscriptsService } from './cargarscripts.service';
 import { AcercaComponent } from './content/acerca/acerca.component';
+import { RecamaraComponent } from './content/recamara/recamara.component';
 
 const appRoutes: Routes = [
  {path:'',component:InicioComponent},
  {path:'acerca',component:AcercaComponent},
- {path:'inicio',component:InicioComponent}
+ {path:'inicio',component:InicioComponent},
+ {path:'recamara',component:RecamaraComponent},
+
 
   
  ]
@@ -33,7 +36,8 @@ const appRoutes: Routes = [
     RegistroComponent,
     ContentComponent,
     SesionComponent,
-    AcercaComponent
+    AcercaComponent,
+    RecamaraComponent
   ],
   imports: [
     BrowserModule,
