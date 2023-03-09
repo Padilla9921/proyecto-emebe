@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { CargarscriptsService } from '../cargarscripts.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,12 +7,4 @@ import { CargarscriptsService } from '../cargarscripts.service';
 })
 export class InicioComponent {
 
-
-   
-
-
 }
-
-
-
-
