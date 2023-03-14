@@ -31,6 +31,7 @@ const appRoutes: Routes = [
  {path:'comedor',component:ComedorComponent},
  {path:'sillas',component:SillasComponent},
  {path:'contacto',component:ContactoComponent},
+ {path:'sesion',component:SesionComponent}
  ]
 
 @NgModule({
@@ -51,6 +52,7 @@ const appRoutes: Routes = [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule.forRoot(appRoutes,{enableTracing:true}),
     AngularFireModule.initializeApp({
       apiKey: "AIzaSyB6yBIB8wVXpi2i6JZjYlTJReEBnqWuoAQ",
       authDomain: "muebles-la-espuela.firebaseapp.com",
@@ -59,10 +61,10 @@ const appRoutes: Routes = [
       messagingSenderId: "960928744373",
       appId: "1:960928744373:web:cb3425b44e27b915a5cffc",
       measurementId: "G-BLTEVYDRPY"}
-})
+)
 ],
-    RouterModule.forRoot(appRoutes,{enableTracing:true})
-  ],
+
+  
   providers: [
     CargarscriptsService
   ],
