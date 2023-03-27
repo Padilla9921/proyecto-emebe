@@ -31,7 +31,9 @@ const appRoutes: Routes = [
  {path:'comedor',component:ComedorComponent},
  {path:'sillas',component:SillasComponent},
  {path:'contacto',component:ContactoComponent},
- {path:'sesion',component:SesionComponent}
+ {path:'sesion',component:SesionComponent},
+ {path:'registro',component:RegistroComponent}
+
  ]
 
 @NgModule({
@@ -46,7 +48,8 @@ const appRoutes: Routes = [
     SesionComponent,
     AcercaComponent,
     SillasComponent,
-    ContactoComponent
+    ContactoComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
