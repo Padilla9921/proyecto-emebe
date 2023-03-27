@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CargarscriptsService } from '../cargarscripts.service';
-
+import { AngularFireAuth } from '@angular/fire/compat/auth';
+import{Router} from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,7 +13,7 @@ import { CargarscriptsService } from '../cargarscripts.service';
 export class HeaderComponent {
 
 
-  constructor (private cargarscripts:CargarscriptsService){
+  constructor (private cargarscripts:CargarscriptsService,private auth:AngularFireAuth,private router:Router){
     cargarscripts.carga([
        
     "assets/vendor/aos/aos.js",
@@ -24,10 +25,22 @@ export class HeaderComponent {
   
     
      ])
-
     }
-
-
+    cerrarSesion(){
+      this.auth.authState.subscribe(user=>{
+        if(user){
+          this.auth.signOut().then(()=>{
+            localStorage.removeItem('user');
+            alert("¡Sesión Finalizada!")
+window.location.reload()
+          })
+        }
+        else{
+          this.router.navigate(['/inicio'])
+    }
+     })
+   }
+   
 }
 
 

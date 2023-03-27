@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-// import { AngularFireAuth } from '@angular/fire/auth';
+
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 
 @Component({
@@ -18,7 +19,7 @@ contrasena:""
 ccontrasena:any
 
 
-constructor(){}
+constructor(private auth:AngularFireAuth ){}
 
 ngOnInit(): void{
 
@@ -26,7 +27,7 @@ ngOnInit(): void{
  
 //registrarme
  registrarme(){
-   if(this.form.nombre != '' && this.form.correo != '' && this.contrasena != '' && this.ccontrasena!=''){
+   if(this.form.nombre != '' && this.form.correo != '' && this.form.contrasena != '' && this.ccontrasena!=''){
     if(this.form.contrasena!=this.ccontrasena){
       alert("las contrasenas no coinciden.")
     }
