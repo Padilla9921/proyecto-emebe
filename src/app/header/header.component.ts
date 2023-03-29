@@ -11,7 +11,7 @@ import{Router} from '@angular/router';
 
 
 export class HeaderComponent {
-
+usuario_activo: boolean
 
   constructor (private cargarscripts:CargarscriptsService,private auth:AngularFireAuth,private router:Router){
     cargarscripts.carga([
@@ -40,9 +40,19 @@ window.location.reload()
     }
      })
    }
+   ngOnInit(): void {
+     this.auth.authState.subscribe(user => {
+      if(user) {
+        this.usuario_activo = true
+      }
+      else{
+        this.usuario_activo = false
+      }
+     })
+   
    
 }
-
+}
 
 
 

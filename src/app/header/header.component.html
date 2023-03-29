@@ -28,9 +28,9 @@
         
         <li><a class="nav-link scrollto" [routerLink]="['contacto']">Contacto</a></li>
 
-        <li><a class="nav-link scrollto" [routerLink]="['sesion']">Sesion</a></li>
+        <li><a class="nav-link scrollto" [routerLink]="['sesion']"*ngIf="usuario_activo==false">Sesion</a></li>
 
-        <li><a class="nav-link scrollto" [routerLink]="['']" (click)="cerrarSesion()">Cerrar Sesion</a></li>
+        <li><a class="nav-link scrollto" [routerLink]="['']" (click)="cerrarSesion()"*ngIf="usuario_activo==true">Cerrar Sesion</a></li>
 
 
         <li><a class="nav-link scrollto" [routerLink]="['registro']">Registro</a></li>
