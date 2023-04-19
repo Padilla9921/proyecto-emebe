@@ -24,43 +24,32 @@
         </li>
         
         <li><a class="nav-link scrollto" [routerLink]="['contacto']">Contacto</a></li>
+        
+        
+        <li><a class="nav-link scrollto" [routerLink]="['registro']">Registrar</a></li>
 
-        <li><a class="nav-link scrollto" [routerLink]="['sesion']"*ngIf="usuario_activo==false">Sesion</a></li>
 
-        <li><a class="nav-link scrollto" [routerLink]="['']" (click)="cerrarSesion()"*ngIf="usuario_activo==true">Cerrar Sesion</a></li>
+        <li><a class="nav-link scrollto" [routerLink]="['sesion']"*ngIf="usuario_activo==false">
+          <i class ="fas fa-user-circle"></i>Sesion</a></li>
 
-
-        <li><a class="nav-link scrollto" [routerLink]="['registro']">Registro</a></li>
-
-        <!-- <li class="dropdown"><a href="#"><span>Categoria</span> <i class="bi bi-chevron-down"></i></a>
-          <ul>
-            <li><a href="#">Sillas</a></li> 
-            <li class="dropdown"><a href="#"><span>Camas</span> <i class="bi bi-chevron-right"></i></a>
-              <ul>
-                <li><a href="#">Individual</a></li>
-                <li><a href="#">Infantil</a></li>
-         
-              </ul>  
-            </li>
-            <li><a href="#">Mesas</a></li>
-            <li><a href="#">Drop Down 3</a></li>
-            <li><a href="#">Drop Down 4</a></li>
-          </ul>
-        </li> -->
+        <li><a class="nav-link scrollto" [routerLink]="['']" (click)="cerrarSesion()"*ngIf="usuario_activo==true">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Cerrar Sesion</a></li>
       </ul>
       <i class="bi bi-list mobile-nav-toggle"></i>
-    </nav><!-- .navbar -->
+
+
+    </nav>
 
   </div>
-</header><!-- End Header -->
+</header>
 
-  <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="container text-center text-md-left" data-aos="fade-up">
       <h1>Muebles La Espuela</h1>
       <h2>Tu imaginalo, nosotros lo hacemos realidad.</h2>
       <a  class="nav-link scrollto active"[routerLink]="['inicio']" class="btn-get-started scrollto">Crea.</a>
     </div>
-  </section><!-- End Hero -->
+  </section>
 
   
