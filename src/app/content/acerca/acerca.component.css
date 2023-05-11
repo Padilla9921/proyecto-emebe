@@ -1,13 +1,22 @@
 img{
 
-    display: block;
+    display:inline;
     margin: auto;
+    width: 50%;
+    float: center;
+
 }
+
+p{
+    font-family:"segoe UI";
+}
+
 h1{
+padding: 99px;
 text-align: justify;
 text-decoration: dashed;
 }
-h2{
 
+h2{
     text-decoration: dashed;
 }

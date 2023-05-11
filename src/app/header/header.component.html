@@ -1,7 +1,7 @@
 <!-- ======= Header ======= -->
-<header  class="fixed-top d-flex align-items-center">
+<header class="fixed-top d-flex align-items-center">
   <div class="container d-flex justify-content-between">
-
+  
     <div class="titulo" class="logo">
       <!-- para poner el nombre de la pagina como texto -->
       <!-- <a href="index.html">Muebles La Espuela</a> -->
@@ -22,16 +22,9 @@
        
           </ul>  
         </li>
-        
-        <li><a class="nav-link scrollto" [routerLink]="['contacto']">Contacto</a></li>
-        
-        
         <li><a class="nav-link scrollto" [routerLink]="['registro']">Registrar</a></li>
-
-
         <li><a class="nav-link scrollto" [routerLink]="['sesion']"*ngIf="usuario_activo==false">
           <i class ="fas fa-user-circle"></i>Sesion</a></li>
-
         <li><a class="nav-link scrollto" [routerLink]="['']" (click)="cerrarSesion()"*ngIf="usuario_activo==true">
           <i class="fa-solid fa-right-from-bracket"></i>
           Cerrar Sesion</a></li>
@@ -43,14 +36,3 @@
 
   </div>
 </header>
-
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
-    <div class="container text-center text-md-left" data-aos="fade-up">
-      <h1>Muebles La Espuela</h1>
-      <h2>Tu imaginalo, nosotros lo hacemos realidad.</h2>
-      <a  class="nav-link scrollto active"[routerLink]="['ab']" class="btn-get-started scrollto">Crea.</a>
-    </div>
-  </section>
- 
-
-  
